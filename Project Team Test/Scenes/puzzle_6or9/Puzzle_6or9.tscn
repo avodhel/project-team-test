@@ -1,0 +1,76 @@
+[gd_scene format=2]
+
+[node name="Puzzle_6or9" type="Node2D"]
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="Position2D" type="Position2D" parent="Positions"]
+
+[node name="Position2D2" type="Position2D" parent="Positions"]
+position = Vector2( 50, 0 )
+
+[node name="Position2D3" type="Position2D" parent="Positions"]
+position = Vector2( 100, 0 )
+
+[node name="Position2D4" type="Position2D" parent="Positions"]
+position = Vector2( 150, 0 )
+
+[node name="Position2D5" type="Position2D" parent="Positions"]
+position = Vector2( 200, 0 )
+
+[node name="Position2D6" type="Position2D" parent="Positions"]
+position = Vector2( 250, 0 )
+
+[node name="Position2D7" type="Position2D" parent="Positions"]
+position = Vector2( 300, 0 )
+
+[node name="Position2D8" type="Position2D" parent="Positions"]
+position = Vector2( 350, 0 )
+
+[node name="Position2D9" type="Position2D" parent="Positions"]
+position = Vector2( 0, 50 )
+
+[node name="Position2D10" type="Position2D" parent="Positions"]
+position = Vector2( 50, 50 )
+
+[node name="Position2D11" type="Position2D" parent="Positions"]
+position = Vector2( 100, 50 )
+
+[node name="Position2D12" type="Position2D" parent="Positions"]
+position = Vector2( 150, 50 )
+
+[node name="Position2D13" type="Position2D" parent="Positions"]
+position = Vector2( 200, 50 )
+
+[node name="Position2D14" type="Position2D" parent="Positions"]
+position = Vector2( 250, 50 )
+
+[node name="Position2D15" type="Position2D" parent="Positions"]
+position = Vector2( 300, 50 )
+
+[node name="Position2D16" type="Position2D" parent="Positions"]
+position = Vector2( 350, 50 )
+
+[node name="Position2D17" type="Position2D" parent="Positions"]
+position = Vector2( 0, 100 )
+
+[node name="Position2D18" type="Position2D" parent="Positions"]
+position = Vector2( 50, 100 )
+
+[node name="Position2D19" type="Position2D" parent="Positions"]
+position = Vector2( 100, 100 )
+
+[node name="Position2D20" type="Position2D" parent="Positions"]
+position = Vector2( 150, 100 )
+
+[node name="Position2D21" type="Position2D" parent="Positions"]
+position = Vector2( 200, 100 )
+
+[node name="Position2D22" type="Position2D" parent="Positions"]
+position = Vector2( 250, 100 )
+
+[node name="Position2D23" type="Position2D" parent="Positions"]
+position = Vector2( 300, 100 )
+
+[node name="Position2D24" type="Position2D" parent="Positions"]
+position = Vector2( 350, 100 )

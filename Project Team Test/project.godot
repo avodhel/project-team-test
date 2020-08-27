@@ -16,11 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Team Test"
+run/main_scene="res://Scenes/puzzle_6or9/Puzzle_6or9.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=360
+window/size/height=360
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.0588235, 0.0588235, 0.0588235, 1 )
 environment/default_environment="res://default_env.tres"
