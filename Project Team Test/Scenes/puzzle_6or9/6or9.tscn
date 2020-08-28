@@ -9,7 +9,6 @@ radius = 6.56857
 height = 11.5439
 
 [node name="6or9" type="Area2D"]
-position = Vector2( 180, 180 )
 script = ExtResource( 2 )
 numbers = [ ExtResource( 1 ), ExtResource( 3 ) ]
 

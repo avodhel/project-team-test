@@ -11,12 +11,13 @@ var wait_time = 0.3
 
 func _ready():
 	click_timer.wait_time = wait_time
-	_rand_number()
 
 #choose 6 or 9 
-func _rand_number():
-	randomize()
-	sprite.texture = numbers[randi() % numbers.size()]
+func prepare_number(value) -> void:
+	if value == 6:
+		sprite.texture = numbers[0]
+	else:
+		sprite.texture = numbers[1]
 
 func _on_6or9_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):

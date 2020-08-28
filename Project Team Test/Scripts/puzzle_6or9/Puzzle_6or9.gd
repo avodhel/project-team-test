@@ -1,47 +1,47 @@
 extends Node2D
 
-onready var numbers = $Numbers
+export (PackedScene) var six_or_nine
+
+onready var positions = $Positions
+
+var places = []
 
 func _ready():
+	places.clear()
 	_puzzle_creater()
 
 #create puzzle according to datas
 func _puzzle_creater() -> void:
-	var puzzle_type = _select_puzzle_type()
+	var less_number = _select_less_number()
 	var choosen_places = _get_choosen_places()
 	var majority_number
 	#select majority number according to puzzle type
-	if puzzle_type == 6:
+	if less_number == 6:
 		majority_number = 9
 	else:
 		majority_number = 6
-	#set numbers to places
-	for place in numbers.get_child_count():
-		for choosen_place in choosen_places:
-			if place == choosen_place:
-				#numbers.get_child(place).emit_signal("get_number", puzzle_type)
-				pass
-			else:
-				#numbers.get_child(place).emit_signal("get_number", majority_number)
-				pass
+	#instance numbers
+	for place in places:
+		_instance_number(positions.get_child(place), majority_number)
+	for choosen_place in choosen_places:
+		_instance_number(positions.get_child(choosen_place), less_number)
 
 #which number gonna be less 6 or 9?
-func _select_puzzle_type():
-	var puzzle_type
+func _select_less_number():
+	var less_number
 	randomize()
 	var possibility = rand_range(0, 100)
 	if possibility <50:
-		puzzle_type = 6
+		less_number = 6
 	else:
-		puzzle_type = 9
-	print(puzzle_type)
-	return puzzle_type
+		less_number = 9
+	print(less_number)
+	return less_number
 
 #selecting places for less number
 func _get_choosen_places():
-	#get available places for numbers
-	var places = []
-	for place in numbers.get_child_count():
+	#get available places for positions
+	for place in positions.get_child_count():
 		places.append(place)
 	#choose three places from available places
 	var choosen_places = []
@@ -52,3 +52,8 @@ func _get_choosen_places():
 	print(choosen_places)
 	return choosen_places
 
+#instance number according to value and set it to place
+func _instance_number(place, value) -> void:
+	var ins_six_or_nine = six_or_nine.instance()
+	place.add_child(ins_six_or_nine)
+	ins_six_or_nine.prepare_number(value)
