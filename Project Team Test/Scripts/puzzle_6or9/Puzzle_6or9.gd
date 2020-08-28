@@ -4,6 +4,7 @@ export (PackedScene) var six_or_nine
 
 onready var positions = $Positions
 
+var less_number
 var places = []
 
 func _ready():
@@ -26,9 +27,16 @@ func _puzzle_creater() -> void:
 	for choosen_place in choosen_places:
 		_instance_number(positions.get_child(choosen_place), less_number)
 
+#checking if the puzzle is finished
+func puzzle_checker():
+	var current_numbers = []
+	for number in positions.get_child_count():
+		current_numbers.append(positions.get_child(number).get_child(0).number)
+	if current_numbers.has(less_number) == false:
+		print("puzzle finished")
+
 #which number gonna be less 6 or 9?
 func _select_less_number():
-	var less_number
 	randomize()
 	var possibility = rand_range(0, 100)
 	if possibility <50:
@@ -57,3 +65,5 @@ func _instance_number(place, value) -> void:
 	var ins_six_or_nine = six_or_nine.instance()
 	place.add_child(ins_six_or_nine)
 	ins_six_or_nine.prepare_number(value)
+	#signal connect to checking puzzle
+	ins_six_or_nine.connect("checking_puzzle", self, "puzzle_checker");
