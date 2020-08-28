@@ -4,8 +4,9 @@
 [ext_resource path="res://Scripts/puzzle_6or9/6or9.gd" type="Script" id=2]
 [ext_resource path="res://Textures/9.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 14.5576
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.56857
+height = 11.5439
 
 [node name="6or9" type="Area2D"]
 position = Vector2( 180, 180 )

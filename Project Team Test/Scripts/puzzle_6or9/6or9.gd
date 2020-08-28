@@ -9,11 +9,11 @@ onready var click_timer = $click_timer
 
 var wait_time = 0.3
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	click_timer.wait_time = wait_time
 	_rand_number()
 
+#choose 6 or 9 
 func _rand_number():
 	randomize()
 	sprite.texture = numbers[randi() % numbers.size()]

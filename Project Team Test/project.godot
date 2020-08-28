@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=360
+window/size/width=480
 window/size/height=360
 
 [rendering]

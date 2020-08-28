@@ -1,76 +1,79 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/puzzle_6or9/pos_6or9.tscn" type="PackedScene" id=1]
 
 [node name="Puzzle_6or9" type="Node2D"]
 
-[node name="Positions" type="Node2D" parent="."]
+[node name="Numbers" type="Node2D" parent="."]
 
-[node name="Position2D" type="Position2D" parent="Positions"]
-
-[node name="Position2D2" type="Position2D" parent="Positions"]
-position = Vector2( 50, 0 )
-
-[node name="Position2D3" type="Position2D" parent="Positions"]
-position = Vector2( 100, 0 )
-
-[node name="Position2D4" type="Position2D" parent="Positions"]
-position = Vector2( 150, 0 )
-
-[node name="Position2D5" type="Position2D" parent="Positions"]
-position = Vector2( 200, 0 )
-
-[node name="Position2D6" type="Position2D" parent="Positions"]
-position = Vector2( 250, 0 )
-
-[node name="Position2D7" type="Position2D" parent="Positions"]
-position = Vector2( 300, 0 )
-
-[node name="Position2D8" type="Position2D" parent="Positions"]
-position = Vector2( 350, 0 )
-
-[node name="Position2D9" type="Position2D" parent="Positions"]
-position = Vector2( 0, 50 )
-
-[node name="Position2D10" type="Position2D" parent="Positions"]
+[node name="pos_6or9_1" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 50, 50 )
 
-[node name="Position2D11" type="Position2D" parent="Positions"]
+[node name="pos_6or9_2" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 75, 50 )
+
+[node name="pos_6or9_3" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 100, 50 )
 
-[node name="Position2D12" type="Position2D" parent="Positions"]
+[node name="pos_6or9_4" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 125, 50 )
+
+[node name="pos_6or9_5" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 150, 50 )
 
-[node name="Position2D13" type="Position2D" parent="Positions"]
+[node name="pos_6or9_6" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 175, 50 )
+
+[node name="pos_6or9_7" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 200, 50 )
 
-[node name="Position2D14" type="Position2D" parent="Positions"]
-position = Vector2( 250, 50 )
+[node name="pos_6or9_8" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 225, 50 )
 
-[node name="Position2D15" type="Position2D" parent="Positions"]
-position = Vector2( 300, 50 )
-
-[node name="Position2D16" type="Position2D" parent="Positions"]
-position = Vector2( 350, 50 )
-
-[node name="Position2D17" type="Position2D" parent="Positions"]
-position = Vector2( 0, 100 )
-
-[node name="Position2D18" type="Position2D" parent="Positions"]
+[node name="pos_6or9_9" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 50, 100 )
 
-[node name="Position2D19" type="Position2D" parent="Positions"]
+[node name="pos_6or9_10" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 75, 100 )
+
+[node name="pos_6or9_11" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 100, 100 )
 
-[node name="Position2D20" type="Position2D" parent="Positions"]
+[node name="pos_6or9_12" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 125, 100 )
+
+[node name="pos_6or9_13" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 150, 100 )
 
-[node name="Position2D21" type="Position2D" parent="Positions"]
+[node name="pos_6or9_14" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 175, 100 )
+
+[node name="pos_6or9_15" parent="Numbers" instance=ExtResource( 1 )]
 position = Vector2( 200, 100 )
 
-[node name="Position2D22" type="Position2D" parent="Positions"]
-position = Vector2( 250, 100 )
+[node name="pos_6or9_16" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 225, 100 )
 
-[node name="Position2D23" type="Position2D" parent="Positions"]
-position = Vector2( 300, 100 )
+[node name="pos_6or9_17" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 50, 150 )
 
-[node name="Position2D24" type="Position2D" parent="Positions"]
-position = Vector2( 350, 100 )
+[node name="pos_6or9_18" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 75, 150 )
+
+[node name="pos_6or9_19" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 100, 150 )
+
+[node name="pos_6or9_20" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 125, 150 )
+
+[node name="pos_6or9_21" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 150, 150 )
+
+[node name="pos_6or9_22" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 175, 150 )
+
+[node name="pos_6or9_23" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 200, 150 )
+
+[node name="pos_6or9_24" parent="Numbers" instance=ExtResource( 1 )]
+position = Vector2( 225, 150 )
