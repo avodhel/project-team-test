@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/9.png-9a6ea8cb35264537254958f8ed4e1d44.stex"
+path="res://.import/9.png-41e0bb03dca7e11ae3bfae9011d22c77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/9.png"
-dest_files=[ "res://.import/9.png-9a6ea8cb35264537254958f8ed4e1d44.stex" ]
+source_file="res://Textures/puzzle_findall6sor9s/9.png"
+dest_files=[ "res://.import/9.png-41e0bb03dca7e11ae3bfae9011d22c77.stex" ]
 
 [params]
 

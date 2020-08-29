@@ -16,13 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Team Test"
-run/main_scene="res://Scenes/puzzle_6or9/Puzzle_6or9.tscn"
+run/main_scene="res://Scenes/puzzle_findall6sor9s/puzzle_findall6sor9s.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=480
-window/size/height=360
+window/size/width=275
+window/size/height=200
 
 [rendering]
 

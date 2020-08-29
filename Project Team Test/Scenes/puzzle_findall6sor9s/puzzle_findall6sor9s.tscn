@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/puzzle_6or9/pos_6or9.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/puzzle_6or9/Puzzle_6or9.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/puzzle_6or9/6or9.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/puzzle_findall6sor9s/pos_6or9.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/puzzle_findall6sor9s/6or9.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/puzzle_findall6sor9s/puzzle_findall6sor9s.gd" type="Script" id=3]
 
-[node name="Puzzle_6or9" type="Node2D"]
-script = ExtResource( 2 )
-six_or_nine = ExtResource( 3 )
+
+
+[node name="Puzzle_FindAll6sOr9s" type="Node2D"]
+script = ExtResource( 3 )
+six_or_nine = ExtResource( 2 )
 
 [node name="Positions" type="Node2D" parent="."]
 
