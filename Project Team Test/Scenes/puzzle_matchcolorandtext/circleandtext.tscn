@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/puzzle_matchcolorandtext/circleandtext.gd" type="Script" id=1]
+[ext_resource path="res://Textures/puzzle_matchcolorandtext/circle.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.0667
+
+[node name="CircleAndText" type="Node2D"]
+script = ExtResource( 1 )
+colors = [ Color( 0.92549, 0.207843, 0.207843, 1 ), Color( 0.0901961, 0.380392, 0.521569, 1 ), Color( 0.152941, 0.827451, 0.168627, 1 ), Color( 0.862745, 0.854902, 0.137255, 1 ) ]
+
+[node name="Circle" type="Area2D" parent="."]
+position = Vector2( 137, 75 )
+scale = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="Circle"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
+shape = SubResource( 1 )
+
+[node name="ColorText" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 125.0
+margin_right = 162.0
+margin_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NULL"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="Circle" to="." method="_on_Circle_input_event"]
