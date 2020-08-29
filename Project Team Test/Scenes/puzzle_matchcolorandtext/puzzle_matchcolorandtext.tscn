@@ -1,3 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/puzzle_matchcolorandtext/puzzle_matchcolorandtext.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/puzzle_matchcolorandtext/circleandtext.tscn" type="PackedScene" id=2]
 
 [node name="Puzzle_MatchColorAndText" type="Node2D"]
+script = ExtResource( 1 )
+circle_and_text = ExtResource( 2 )
+
+[node name="puzzle_timer" type="Timer" parent="."]
+wait_time = 1.5
+[connection signal="timeout" from="puzzle_timer" to="." method="_on_puzzle_timer_timeout"]

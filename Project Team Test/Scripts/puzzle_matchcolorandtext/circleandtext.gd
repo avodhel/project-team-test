@@ -1,5 +1,7 @@
 extends Node2D
 
+signal stop_puzzle
+
 export (Array, Color) var colors
 
 onready var circle = $Circle/Sprite
@@ -34,3 +36,4 @@ func _on_Circle_input_event(viewport, event, shape_idx):
 			print("successfull")
 		else:
 			print("failed")
+		emit_signal("stop_puzzle")
