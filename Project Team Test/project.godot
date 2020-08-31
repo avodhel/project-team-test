@@ -23,6 +23,8 @@ config/icon="res://icon.png"
 
 window/size/width=275
 window/size/height=200
+window/size/test_width=275
+window/size/test_height=200
 
 [rendering]
 
