@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var mouse_entered = false
 var drag_mouse = false
-var draggingDistance = Vector2(0, 0)
+var draggingDistance = Vector2()
 var dir = 0
 
 func _on_Body_input_event(viewport, event, shape_idx):
@@ -20,3 +20,6 @@ func _on_Body_input_event(viewport, event, shape_idx):
 
 func _on_Body_mouse_entered():
 	mouse_entered = true
+
+func _on_Body_mouse_exited():
+	mouse_entered = false

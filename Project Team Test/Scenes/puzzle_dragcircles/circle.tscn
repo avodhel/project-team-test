@@ -21,3 +21,4 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 [connection signal="input_event" from="Body" to="Body" method="_on_Body_input_event"]
 [connection signal="mouse_entered" from="Body" to="Body" method="_on_Body_mouse_entered"]
+[connection signal="mouse_exited" from="Body" to="Body" method="_on_Body_mouse_exited"]

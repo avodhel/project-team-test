@@ -14,9 +14,9 @@ position = Vector2( 75, 100 )
 position = Vector2( 200, 100 )
 
 [node name="Long_Obstacle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 170.702, 84.9305 )
+position = Vector2( 0, 85 )
 
 [node name="Short_Obstacle" parent="." instance=ExtResource( 4 )]
-position = Vector2( 95.0213, 113.521 )
+position = Vector2( 0, 115 )
 
 [node name="Circles" parent="." instance=ExtResource( 2 )]
