@@ -1,10 +1,7 @@
 extends Node2D
 
-onready var circle1 = $Circle
-onready var circle2 = $Circle2
-
-func _ready():
-	pass # Replace with function body.
+onready var circle1 = $Circle/Body
+onready var circle2 = $Circle2/Body
 
 func _process(delta):
 	if circle1.drag_mouse:
