@@ -9,6 +9,7 @@ onready var obstacle = $Path2D/PathFollow2D/Obstacle
 
 var direction = 1 #left or right
 
+#move obstacles
 func _process(delta):
 	path_follow.offset += speed * direction * delta
 	if direction > 0 and path_follow.unit_offset > 0.99: #if moving right

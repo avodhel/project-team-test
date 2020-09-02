@@ -13,6 +13,7 @@ func _puzzle_creater():
 	puzzle_timer.start()
 	ins_circle_and_text = circle_and_text.instance()
 	add_child(ins_circle_and_text)
+	#signal connect to stop puzzle
 	ins_circle_and_text.connect("stop_puzzle", self, "stop_puzzle")
 
 func _on_puzzle_timer_timeout():

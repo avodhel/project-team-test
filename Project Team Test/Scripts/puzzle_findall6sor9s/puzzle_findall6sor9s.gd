@@ -5,6 +5,7 @@ export (PackedScene) var six_or_nine
 onready var positions = $Positions
 
 var less_number
+var majority_number
 var places = []
 
 func _ready():
@@ -13,14 +14,9 @@ func _ready():
 
 #create puzzle according to datas
 func _puzzle_creater() -> void:
-	var less_number = _select_less_number()
+	less_number = _select_less_number()
+	majority_number = _select_majority_number(less_number)
 	var choosen_places = _get_choosen_places()
-	var majority_number
-	#select majority number according to puzzle type
-	if less_number == 6:
-		majority_number = 9
-	else:
-		majority_number = 6
 	#instance numbers
 	for place in places:
 		_instance_number(positions.get_child(place), majority_number)
@@ -43,8 +39,15 @@ func _select_less_number():
 		less_number = 6
 	else:
 		less_number = 9
-	print(less_number)
 	return less_number
+
+#select majority number according to less number
+func _select_majority_number(less_number):
+	if less_number == 6:
+		majority_number = 9
+	else:
+		majority_number = 6
+	return majority_number
 
 #selecting places for less number
 func _get_choosen_places():
