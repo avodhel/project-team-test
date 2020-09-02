@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var circle1 = $Circle/Body
+onready var circle1 = $Circle1/Body
 onready var circle2 = $Circle2/Body
 
 func _process(delta):

@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/puzzle_dragcircles/platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/puzzle_dragcircles/movecircles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/puzzle_dragcircles/long_obstacle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/puzzle_dragcircles/short_obstacle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/puzzle_dragcircles/puzzle_dragcircles.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.75, 3.5 )
 
 [node name="Puzzle_DragCircles" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 75, 100 )
@@ -20,3 +25,14 @@ position = Vector2( 0, 85 )
 position = Vector2( 0, 115 )
 
 [node name="Circles" parent="." instance=ExtResource( 2 )]
+
+[node name="Success_Point" type="Node2D" parent="."]
+
+[node name="point" type="Position2D" parent="Success_Point"]
+position = Vector2( 155, 48 )
+
+[node name="point_area" type="Area2D" parent="Success_Point/point"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Success_Point/point/point_area"]
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Success_Point/point/point_area" to="." method="_on_point_area_body_entered"]
