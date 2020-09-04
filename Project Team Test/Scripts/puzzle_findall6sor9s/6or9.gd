@@ -6,7 +6,7 @@ export (int) var number
 export (Array, Texture) var numbers
 
 onready var sprite = $Sprite
-onready var tween = $Sprite/Tween
+onready var tween = $Tween
 onready var coll = $CollisionShape2D
 onready var click_timer = $click_timer
 
