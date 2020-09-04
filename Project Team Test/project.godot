@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Team Test"
-run/main_scene="res://Scenes/puzzle_dragcircles/puzzle_dragcircles.tscn"
+run/main_scene="res://Scenes/puzzle_fixsquare/puzzle_fixsquare.tscn"
 config/icon="res://icon.png"
 
 [display]
