@@ -1,5 +1,7 @@
 extends Node2D
 
+signal puzzle_finished(event)
+
 export (PackedScene) var circle_and_text
 
 onready var puzzle_timer = $puzzle_timer
@@ -26,5 +28,5 @@ func _on_puzzle_timer_timeout():
 
 #stop puzzle when clicked to circle
 func stop_puzzle():
-	ins_circle_and_text.queue_free()
 	puzzle_timer.stop()
+	emit_signal("puzzle_finished", "create_new_puzzle")

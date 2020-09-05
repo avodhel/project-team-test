@@ -1,5 +1,7 @@
 extends Node2D
 
+signal puzzle_finished(event)
+
 onready var long_obstacle = $Long_Obstacle
 onready var short_obstacle = $Short_Obstacle
 
@@ -9,13 +11,7 @@ func _ready():
 	short_obstacle.connect("puzzle_checking", self, "puzzle_checker")
 
 func puzzle_checker(event) -> void:
-	if event == "failed":
-		get_tree().paused = true
-	yield(get_tree().create_timer(0.6), "timeout")
-	#remove all child nodes
-	for child in get_children():
-		child.queue_free()
-	print(event)
+	emit_signal("puzzle_finished", "create_new_puzzle")
 
 func _on_point_area_body_entered(body):
 	#when circle1 reachs to the success point

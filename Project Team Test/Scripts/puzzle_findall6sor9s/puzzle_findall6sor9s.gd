@@ -1,5 +1,7 @@
 extends Node2D
 
+signal puzzle_finished(event)
+
 export (PackedScene) var six_or_nine
 
 onready var positions = $Positions
@@ -30,6 +32,7 @@ func puzzle_checker():
 		current_numbers.append(positions.get_child(number).get_child(0).number)
 	if current_numbers.has(less_number) == false:
 		print("puzzle finished")
+		emit_signal("puzzle_finished", "create_new_puzzle")
 
 #which number gonna be less 6 or 9?
 func _select_less_number():
@@ -60,7 +63,6 @@ func _get_choosen_places():
 		var choosen_place = places[randi() % places.size()]
 		places.erase(choosen_place)
 		choosen_places.append(choosen_place)
-	print(choosen_places)
 	return choosen_places
 
 #instance number according to value and set it to place
