@@ -18,5 +18,7 @@ func _process(delta):
 		direction = 1
 
 func _on_Obstacle_body_entered(body):
-	if body.get_parent().name == "Circle1" || body.get_parent().name == "Circle2":
-		emit_signal("puzzle_checking", "failed")
+	if get_parent().failed_control == false:
+		if body.get_parent().name == "Circle1" || body.get_parent().name == "Circle2":
+			emit_signal("puzzle_checking", "failed")
+			get_parent().failed_control = true

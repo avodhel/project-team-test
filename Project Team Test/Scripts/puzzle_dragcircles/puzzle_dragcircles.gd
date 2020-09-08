@@ -5,6 +5,8 @@ signal puzzle_finished(event)
 onready var long_obstacle = $Long_Obstacle
 onready var short_obstacle = $Short_Obstacle
 
+var failed_control = false
+
 func _ready():
 	#signal connect for checking puzzle
 	long_obstacle.connect("puzzle_checking", self, "puzzle_checker")
