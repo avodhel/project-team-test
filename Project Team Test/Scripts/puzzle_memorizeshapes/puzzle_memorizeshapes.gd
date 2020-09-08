@@ -1,45 +1,25 @@
 extends Node2D
 
-export(Array,Texture) var shape_textures
-export(Array,Color) var colors
+signal puzzle_finished(event)
 
-onready var shapes = $shapes
+onready var memorizeshapes = $memorizeshapes
+onready var shapes = $memorizeshapes/shapes
+onready var question1 = $question1_whichshapewasnotthere
 
-var texture_container = []
-var shape_texture_no
-var choosen_shape
-var color_container = []
-var color_no
-var choosen_color
+var shape_datas = []
 
 func _ready():
-	_puzzle_creater()
-
-func _puzzle_creater() -> void:
-	#fill texture_container from shape_textures array to reuse later.
-	texture_container.clear()
-	for no in shape_textures.size():
-		texture_container.append(shape_textures[no])
-	#fill color_container from colors array to reuse later.
-	color_container.clear()
-	for no in colors.size():
-		color_container.append(colors[no])
-	_prepare_shapes()
-
-#prepare shapes according to random texture and color
-func _prepare_shapes() -> void:
-	randomize()
 	for shape in shapes.get_children():
-		shape.prepare_shape(_select_shape_texture(), _select_shape_color())
+		shape_datas.append(shape)
+	#prepare question
+	yield(get_tree().create_timer(5), "timeout")
+	memorizeshapes.visible = false
+	question1.visible = true
+	question1.shape_datas = shape_datas
+	question1.unused_shape_textures = memorizeshapes.texture_container
+	question1.colors = memorizeshapes.colors
+	question1.create_shapes()
 
-func _select_shape_texture():
-	shape_texture_no = randi() % texture_container.size()
-	choosen_shape = texture_container[shape_texture_no]
-	texture_container.erase(choosen_shape)
-	return choosen_shape
-
-func _select_shape_color():
-	color_no = randi() % color_container.size()
-	choosen_color = color_container[color_no]
-	color_container.erase(choosen_color)
-	return choosen_color
+func puzzle_checker(result) -> void:
+	print(result)
+	emit_signal("puzzle_finished", "create_new_puzzle")

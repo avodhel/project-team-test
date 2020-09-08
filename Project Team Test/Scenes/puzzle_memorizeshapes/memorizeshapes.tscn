@@ -1,0 +1,31 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/puzzle_memorizeshapes/shape.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/puzzle_memorizeshapes/memorizeshapes.gd" type="Script" id=2]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/x.png" type="Texture" id=3]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/hexagon.png" type="Texture" id=4]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/circle.png" type="Texture" id=5]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/right_triangle.png" type="Texture" id=6]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/plus.png" type="Texture" id=7]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/square.png" type="Texture" id=8]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/trapezoid.png" type="Texture" id=9]
+[ext_resource path="res://Textures/puzzle_memorizeshapes/triangle.png" type="Texture" id=10]
+
+[node name="memorizeshapes" type="Node2D"]
+script = ExtResource( 2 )
+shape_textures = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 3 ) ]
+colors = [ Color( 0.92549, 0.207843, 0.207843, 1 ), Color( 0.0901961, 0.380392, 0.521569, 1 ), Color( 0.152941, 0.827451, 0.168627, 1 ), Color( 0.862745, 0.854902, 0.137255, 1 ) ]
+
+[node name="shapes" type="Node2D" parent="."]
+
+[node name="shape" parent="shapes" instance=ExtResource( 1 )]
+position = Vector2( 87, 65 )
+
+[node name="shape2" parent="shapes" instance=ExtResource( 1 )]
+position = Vector2( 187, 65 )
+
+[node name="shape3" parent="shapes" instance=ExtResource( 1 )]
+position = Vector2( 87, 140 )
+
+[node name="shape4" parent="shapes" instance=ExtResource( 1 )]
+position = Vector2( 187, 140 )
