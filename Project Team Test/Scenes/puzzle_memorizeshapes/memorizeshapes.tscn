@@ -29,3 +29,4 @@ position = Vector2( 87, 140 )
 
 [node name="shape4" parent="shapes" instance=ExtResource( 1 )]
 position = Vector2( 187, 140 )
+[connection signal="visibility_changed" from="." to="." method="_on_memorizeshapes_visibility_changed"]

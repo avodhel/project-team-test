@@ -11,6 +11,7 @@ func _ready():
 	short_obstacle.connect("puzzle_checking", self, "puzzle_checker")
 
 func puzzle_checker(event) -> void:
+	print(event)
 	emit_signal("puzzle_finished", "create_new_puzzle")
 
 func _on_point_area_body_entered(body):

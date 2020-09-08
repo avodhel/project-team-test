@@ -12,10 +12,11 @@ var color_container = []
 var color_no
 var choosen_color
 
-func _ready():
-	_puzzle_creater()
+func _on_memorizeshapes_visibility_changed():
+	_prepare_data_containers()
+	_prepare_shapes()
 
-func _puzzle_creater() -> void:
+func _prepare_data_containers() -> void:
 	#fill texture_container from shape_textures array to reuse later.
 	texture_container.clear()
 	for no in shape_textures.size():
@@ -24,7 +25,6 @@ func _puzzle_creater() -> void:
 	color_container.clear()
 	for no in colors.size():
 		color_container.append(colors[no])
-	_prepare_shapes()
 
 #prepare shapes according to random texture and color
 func _prepare_shapes() -> void:
