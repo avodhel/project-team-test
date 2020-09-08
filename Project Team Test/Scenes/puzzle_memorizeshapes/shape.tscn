@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Textures/puzzle_memorizeshapes/square.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/puzzle_memorizeshapes/shape.gd" type="Script" id=2]
+
+[node name="shape" type="Node2D"]
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
