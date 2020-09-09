@@ -17,7 +17,7 @@ func _ready():
 
 func _puzzle_creater() -> void:
 	memorizeshapes.visible = true
-	yield(get_tree().create_timer(1), "timeout")
+	yield(get_tree().create_timer(5), "timeout")
 	_question_selector()
 
 #select randomly between two questions
