@@ -12,7 +12,7 @@ var color_container = []
 var color_no
 var choosen_color
 
-func _on_memorizeshapes_visibility_changed():
+func _ready():
 	_prepare_data_containers()
 	_prepare_shapes()
 
