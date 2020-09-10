@@ -17,7 +17,8 @@ func puzzle_selector(event) -> void:
 	elif event == "create_new_puzzle":
 		if rand_puzzle_no != puzzle_no:
 			yield(get_tree().create_timer(0.3), "timeout")
-			ins_puzzle.queue_free()
+			if ins_puzzle != null:
+				ins_puzzle.queue_free()
 			yield(get_tree().create_timer(1), "timeout")
 			_puzzle_creater(rand_puzzle_no)
 		else:
