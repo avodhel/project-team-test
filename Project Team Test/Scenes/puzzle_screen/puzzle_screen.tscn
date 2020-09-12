@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/puzzle_screen/puzzle_screen.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/puzzle_dragcircles/puzzle_dragcircles.tscn" type="PackedScene" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://Scenes/puzzle_fixsquare/puzzle_fixsquare.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/puzzle_matchcolorandtext/puzzle_matchcolorandtext.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/puzzle_memorizeshapes/puzzle_memorizeshapes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/puzzle_memorizenumbers/puzzle_memorizenumbers.tscn" type="PackedScene" id=7]
 
 [node name="puzzle_screen" type="Node2D"]
 script = ExtResource( 1 )
-puzzles = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
+puzzles = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]

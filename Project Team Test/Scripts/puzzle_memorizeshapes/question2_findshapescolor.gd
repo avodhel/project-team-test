@@ -29,7 +29,7 @@ func _prepare_color_circles() -> void:
 		colors.erase(choosen_color)
 		color_circle.connect("clicked", self, "check_color_match" )
 
-#check if choosen clicked color and shape's color matched
+#check if clicked color and shape's color matched
 func check_color_match(color) -> void:
 	if choosen_shape_color == color:
 		emit_signal("result", "correct")
