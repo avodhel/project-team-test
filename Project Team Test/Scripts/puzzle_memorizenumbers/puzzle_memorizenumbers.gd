@@ -5,6 +5,7 @@ signal puzzle_finished(event)
 onready var memorize_numbers = $memorizenumbers 
 onready var circles_and_numbers = $memorizenumbers/circlesandnumbers
 onready var question1 = $question1_colorsnumber
+onready var question2 = $question2_numberscolor
 
 var circle_and_number_datas = []
 
@@ -17,12 +18,25 @@ func _ready():
 func _puzzle_creater() -> void:
 	memorize_numbers.visible = true
 	yield(get_tree().create_timer(1), "timeout")
+	_question_selector()
+
+#select randomly between questions
+func _question_selector() -> void:
 	memorize_numbers.visible = false
-	#activate question
-	question1.connect("result", self, "puzzle_checker")
-	question1.visible = true
-	question1.circle_and_number_datas = circle_and_number_datas
-	question1.create_question()
+	randomize()
+	var possibility = rand_range(0, 100)
+	if possibility <= 33:
+		question1.connect("result", self, "puzzle_checker")
+		question1.visible = true
+		question1.circle_and_number_datas = circle_and_number_datas
+		question1.create_question()
+	elif possibility > 33 && possibility <= 66:
+		question2.connect("result", self, "puzzle_checker")
+		question2.visible = true
+		question2.circle_and_number_datas = circle_and_number_datas
+		question2.create_question()
+	else:
+		print("question3 selected")
 
 func puzzle_checker(result) -> void:
 	print(result)
