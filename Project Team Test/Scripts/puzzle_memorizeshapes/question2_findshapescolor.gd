@@ -2,6 +2,7 @@ extends Node2D
 
 signal result(event)
 
+export (String) var describe_text
 export (Array) var shape_datas
 export (Array) var colors
 

@@ -1,6 +1,9 @@
 extends Node2D
 
+signal puzzle_started(describe)
 signal puzzle_finished(event)
+
+export (String) var describe_text
 
 onready var memorizeshapes = $memorizeshapes
 onready var shapes = $memorizeshapes/shapes
@@ -16,6 +19,7 @@ func _ready():
 	_puzzle_creater()
 
 func _puzzle_creater() -> void:
+	emit_signal("puzzle_started", describe_text)
 	memorizeshapes.visible = true
 	yield(get_tree().create_timer(5), "timeout")
 	_question_selector()
@@ -26,6 +30,7 @@ func _question_selector() -> void:
 	randomize()
 	var possibility = rand_range(0, 100)
 	if possibility < 50:
+		emit_signal("puzzle_started", question1.describe_text)
 		question1.visible = true
 		question1.shape_datas = shape_datas
 		question1.unused_shape_textures = memorizeshapes.texture_container
@@ -33,6 +38,7 @@ func _question_selector() -> void:
 		question1.colors = memorizeshapes.colors
 		question1.create_shapes()
 	else:
+		emit_signal("puzzle_started", question2.describe_text)
 		question2.connect("result", self, "puzzle_checker")
 		question2.visible = true
 		question2.shape_datas = shape_datas

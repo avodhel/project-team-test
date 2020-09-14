@@ -1,5 +1,6 @@
 extends Node2D
 
+export (String) var describe_text
 export (PackedScene) var shape
 export (Array) var shape_datas
 export (Array) var unused_shape_textures

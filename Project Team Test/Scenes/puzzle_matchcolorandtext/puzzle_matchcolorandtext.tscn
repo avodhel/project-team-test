@@ -5,6 +5,7 @@
 
 [node name="Puzzle_MatchColorAndText" type="Node2D"]
 script = ExtResource( 1 )
+describe_text = "click when the text names the colour  of the circle"
 circle_and_text = ExtResource( 2 )
 
 [node name="puzzle_timer" type="Timer" parent="."]

@@ -1,7 +1,9 @@
 extends Node2D
 
+signal puzzle_started(describe)
 signal puzzle_finished(event)
 
+export (String) var describe_text
 export (PackedScene) var circle_and_text
 
 onready var puzzle_timer = $puzzle_timer
@@ -12,6 +14,7 @@ func _ready():
 	_puzzle_creater()
 
 func _puzzle_creater():
+	emit_signal("puzzle_started", describe_text)
 	puzzle_timer.start()
 	ins_circle_and_text = circle_and_text.instance()
 	add_child(ins_circle_and_text)

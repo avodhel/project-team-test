@@ -5,6 +5,7 @@
 
 [node name="question3_sumofnumbers" type="Node2D"]
 script = ExtResource( 2 )
+describe_text = "what was the sum of the numbers in the circles?"
 
 [node name="numbers" type="Node2D" parent="."]
 

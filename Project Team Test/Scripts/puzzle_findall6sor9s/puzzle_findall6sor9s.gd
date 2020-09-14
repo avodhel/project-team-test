@@ -1,7 +1,9 @@
 extends Node2D
 
+signal puzzle_started(describe)
 signal puzzle_finished(event)
 
+export (String) var describe_text
 export (PackedScene) var six_or_nine
 
 onready var positions = $Positions
@@ -16,6 +18,7 @@ func _ready():
 
 #create puzzle according to datas
 func _puzzle_creater() -> void:
+	emit_signal("puzzle_started", describe_text)
 	less_number = _select_less_number()
 	majority_number = _select_majority_number(less_number)
 	var choosen_places = _get_choosen_places()
@@ -40,8 +43,10 @@ func _select_less_number():
 	var possibility = rand_range(0, 100)
 	if possibility <50:
 		less_number = 6
+		emit_signal("puzzle_started", "find all sixes")
 	else:
 		less_number = 9
+		emit_signal("puzzle_started", "find all nines")
 	return less_number
 
 #select majority number according to less number

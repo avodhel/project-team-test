@@ -11,6 +11,7 @@ extents = Vector2( 9.75, 3.5 )
 
 [node name="Puzzle_DragCircles" type="Node2D"]
 script = ExtResource( 5 )
+describe_text = "drag the circles to the opposite side"
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 75, 100 )

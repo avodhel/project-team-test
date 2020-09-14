@@ -5,6 +5,7 @@
 
 [node name="puzzle_fixsquare" type="Node2D"]
 script = ExtResource( 2 )
+describe_text = "create a square"
 
 [node name="square_pieces" type="Node2D" parent="."]
 

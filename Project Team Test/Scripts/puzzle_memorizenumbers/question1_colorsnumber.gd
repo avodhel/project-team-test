@@ -2,6 +2,7 @@ extends Node2D
 
 signal result(event)
 
+export (String) var describe_text
 export (Array) var circle_and_number_datas
 
 onready var question_circle_sprite = $question_circle/question_circle_sprite

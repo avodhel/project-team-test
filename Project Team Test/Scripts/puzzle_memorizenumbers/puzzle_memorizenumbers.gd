@@ -1,6 +1,9 @@
 extends Node2D
 
+signal puzzle_started(describe)
 signal puzzle_finished(event)
+
+export (String) var describe_text
 
 onready var memorize_numbers = $memorizenumbers 
 onready var circles_and_numbers = $memorizenumbers/circlesandnumbers
@@ -17,6 +20,7 @@ func _ready():
 	_puzzle_creater()
 
 func _puzzle_creater() -> void:
+	emit_signal("puzzle_started", describe_text)
 	memorize_numbers.visible = true
 	yield(get_tree().create_timer(5), "timeout")
 	_question_selector()
@@ -27,16 +31,19 @@ func _question_selector() -> void:
 	randomize()
 	var possibility = rand_range(0, 100)
 	if possibility <= 33:
+		emit_signal("puzzle_started", question1.describe_text)
 		question1.connect("result", self, "puzzle_checker")
 		question1.visible = true
 		question1.circle_and_number_datas = circle_and_number_datas
 		question1.create_question()
 	elif possibility > 33 && possibility <= 66:
+		emit_signal("puzzle_started", question2.describe_text)
 		question2.connect("result", self, "puzzle_checker")
 		question2.visible = true
 		question2.circle_and_number_datas = circle_and_number_datas
 		question2.create_question()
 	else:
+		emit_signal("puzzle_started", question3.describe_text)
 		question3.connect("result", self, "puzzle_checker")
 		question3.visible = true
 		question3.circle_and_number_datas = circle_and_number_datas

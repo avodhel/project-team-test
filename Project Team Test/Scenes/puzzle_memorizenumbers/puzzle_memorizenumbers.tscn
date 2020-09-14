@@ -8,6 +8,7 @@
 
 [node name="puzzle_memorizenumbers" type="Node2D"]
 script = ExtResource( 2 )
+describe_text = "remember the colours and numbers"
 
 [node name="memorizenumbers" parent="." instance=ExtResource( 1 )]
 visible = false

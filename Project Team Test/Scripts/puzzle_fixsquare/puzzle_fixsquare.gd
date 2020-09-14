@@ -1,6 +1,9 @@
 extends Node2D
 
+signal puzzle_started(describe)
 signal puzzle_finished(event)
+
+export (String) var describe_text
 
 onready var pieces = $square_pieces
 
@@ -11,6 +14,7 @@ func _ready():
 	_puzzle_creater()
 
 func _puzzle_creater() -> void:
+	emit_signal("puzzle_started", describe_text)
 	for piece in pieces.get_children():
 		#set random degree for every piece
 		randomize()
