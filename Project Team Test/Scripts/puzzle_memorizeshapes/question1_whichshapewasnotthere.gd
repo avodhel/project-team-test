@@ -38,7 +38,7 @@ func _create_shape(texture, color) -> void:
 	ins_shape.position = _select_position()
 	ins_shape.prepare_shape(texture, color)
 	#signal connect with parent to send puzzle result
-	ins_shape.connect("result", self.get_parent(), "puzzle_checker")
+	ins_shape.connect("result", self.get_parent().get_parent(), "puzzle_checker")
 
 #select position for shapes
 func _select_position():

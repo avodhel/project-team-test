@@ -1,4 +1,4 @@
-extends "res://Scripts/puzzle_memorizenumbers/question.gd"
+extends "res://Scripts/question.gd"
 
 onready var question_number_label = $question_number/number_label
 onready var colors = $colors

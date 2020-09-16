@@ -1,4 +1,4 @@
-extends "res://Scripts/puzzle_memorizenumbers/question.gd"
+extends "res://Scripts/question.gd"
 
 onready var question_circle_sprite = $question_circle/question_circle_sprite
 onready var numbers = $numbers
