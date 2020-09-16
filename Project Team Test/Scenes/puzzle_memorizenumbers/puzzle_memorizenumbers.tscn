@@ -13,11 +13,13 @@ describe_text = "remember the colours and numbers"
 [node name="memorizenumbers" parent="." instance=ExtResource( 1 )]
 visible = false
 
-[node name="question1_colorsnumber" parent="." instance=ExtResource( 3 )]
+[node name="questions" type="Node2D" parent="."]
+
+[node name="question1_colorsnumber" parent="questions" instance=ExtResource( 3 )]
 visible = false
 
-[node name="question2_numberscolor" parent="." instance=ExtResource( 4 )]
+[node name="question2_numberscolor" parent="questions" instance=ExtResource( 4 )]
 visible = false
 
-[node name="question3_sumofnumbers" parent="." instance=ExtResource( 5 )]
+[node name="question3_sumofnumbers" parent="questions" instance=ExtResource( 5 )]
 visible = false

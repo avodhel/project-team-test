@@ -6,10 +6,8 @@ signal puzzle_finished(event)
 export (String) var describe_text
 
 onready var memorize_numbers = $memorizenumbers 
+onready var questions = $questions
 onready var circles_and_numbers = $memorizenumbers/circlesandnumbers
-onready var question1 = $question1_colorsnumber
-onready var question2 = $question2_numberscolor
-onready var question3 = $question3_sumofnumbers
 
 var circle_and_number_datas = []
 
@@ -29,25 +27,11 @@ func _puzzle_creater() -> void:
 func _question_selector() -> void:
 	memorize_numbers.visible = false
 	randomize()
-	var possibility = rand_range(0, 100)
-	if possibility <= 33:
-		emit_signal("puzzle_started", question1.describe_text)
-		question1.connect("result", self, "puzzle_checker")
-		question1.visible = true
-		question1.circle_and_number_datas = circle_and_number_datas
-		question1.create_question()
-	elif possibility > 33 && possibility <= 66:
-		emit_signal("puzzle_started", question2.describe_text)
-		question2.connect("result", self, "puzzle_checker")
-		question2.visible = true
-		question2.circle_and_number_datas = circle_and_number_datas
-		question2.create_question()
-	else:
-		emit_signal("puzzle_started", question3.describe_text)
-		question3.connect("result", self, "puzzle_checker")
-		question3.visible = true
-		question3.circle_and_number_datas = circle_and_number_datas
-		question3.create_question()
+	var ins_question = questions.get_child(randi() % questions.get_child_count())
+	emit_signal("puzzle_started", ins_question.describe_text)
+	ins_question.connect("result", self, "puzzle_checker")
+	ins_question.visible = true
+	ins_question.create_question(circle_and_number_datas)
 
 func puzzle_checker(result) -> void:
 	print(result)
