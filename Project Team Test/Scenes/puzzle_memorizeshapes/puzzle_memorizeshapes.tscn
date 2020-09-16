@@ -12,8 +12,10 @@ describe_text = "memorize what you see"
 [node name="memorizeshapes" parent="." instance=ExtResource( 1 )]
 visible = false
 
-[node name="question1_whichshapewasnotthere" parent="." instance=ExtResource( 2 )]
+[node name="questions" type="Node2D" parent="."]
+
+[node name="question1_whichshapewasnotthere" parent="questions" instance=ExtResource( 2 )]
 visible = false
 
-[node name="question2_findshapescolor" parent="." instance=ExtResource( 4 )]
+[node name="question2_findshapescolor" parent="questions" instance=ExtResource( 4 )]
 visible = false
