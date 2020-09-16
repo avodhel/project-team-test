@@ -4,10 +4,6 @@
 [ext_resource path="res://Scenes/puzzles/puzzle_findall6sor9s/6or9.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/puzzles/puzzle_findall6sor9s/puzzle_findall6sor9s.gd" type="Script" id=3]
 
-
-
-
-
 [node name="Puzzle_FindAll6sOr9s" type="Node2D"]
 script = ExtResource( 3 )
 six_or_nine = ExtResource( 2 )

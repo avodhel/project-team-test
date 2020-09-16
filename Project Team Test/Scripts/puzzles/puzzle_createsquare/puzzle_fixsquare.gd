@@ -1,9 +1,4 @@
-extends Node2D
-
-signal puzzle_started(describe)
-signal puzzle_finished(event)
-
-export (String) var describe_text
+extends "res://Scripts/puzzles/puzzle.gd"
 
 onready var pieces = $square_pieces
 

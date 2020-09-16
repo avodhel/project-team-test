@@ -6,11 +6,6 @@
 [ext_resource path="res://Scenes/puzzles/puzzle_dragcircles/short_obstacle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/puzzles/puzzle_dragcircles/puzzle_dragcircles.gd" type="Script" id=5]
 
-
-
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.75, 3.5 )
 

@@ -1,9 +1,5 @@
-extends Node2D
+extends "res://Scripts/puzzles/puzzle.gd"
 
-signal puzzle_started(describe)
-signal puzzle_finished(event)
-
-export (String) var describe_text
 export (PackedScene) var circle_and_text
 
 onready var puzzle_timer = $puzzle_timer
