@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/puzzles/puzzle_findall6sor9s/pos_6or9.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/puzzles/puzzle_findall6sor9s/6or9.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/puzzles/puzzle_findall6sor9s/puzzle_findall6sor9s.gd" type="Script" id=3]
+
+[node name="Puzzle_FindAll6sOr9s" type="Node2D"]
+script = ExtResource( 3 )
+six_or_nine = ExtResource( 2 )
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="pos_6or9_1" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 50, 50 )
+
+[node name="pos_6or9_2" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 75, 50 )
+
+[node name="pos_6or9_3" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 100, 50 )
+
+[node name="pos_6or9_4" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 125, 50 )
+
+[node name="pos_6or9_5" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 150, 50 )
+
+[node name="pos_6or9_6" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 175, 50 )
+
+[node name="pos_6or9_7" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 200, 50 )
+
+[node name="pos_6or9_8" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 225, 50 )
+
+[node name="pos_6or9_9" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 50, 100 )
+
+[node name="pos_6or9_10" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 75, 100 )
+
+[node name="pos_6or9_11" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 100, 100 )
+
+[node name="pos_6or9_12" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 125, 100 )
+
+[node name="pos_6or9_13" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 150, 100 )
+
+[node name="pos_6or9_14" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 175, 100 )
+
+[node name="pos_6or9_15" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 200, 100 )
+
+[node name="pos_6or9_16" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 225, 100 )
+
+[node name="pos_6or9_17" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 50, 150 )
+
+[node name="pos_6or9_18" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 75, 150 )
+
+[node name="pos_6or9_19" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 100, 150 )
+
+[node name="pos_6or9_20" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 125, 150 )
+
+[node name="pos_6or9_21" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 150, 150 )
+
+[node name="pos_6or9_22" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 175, 150 )
+
+[node name="pos_6or9_23" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 200, 150 )
+
+[node name="pos_6or9_24" parent="Positions" instance=ExtResource( 1 )]
+position = Vector2( 225, 150 )

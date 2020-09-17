@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/puzzle_screen/puzzle_screen.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/puzzle_dragcircles/puzzle_dragcircles.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/puzzle_findall6sor9s/puzzle_findall6sor9s.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/puzzle_fixsquare/puzzle_fixsquare.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/puzzle_matchcolorandtext/puzzle_matchcolorandtext.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/puzzle_memorizeshapes/puzzle_memorizeshapes.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/puzzle_memorizenumbers/puzzle_memorizenumbers.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/puzzles/puzzle_dragcircles/puzzle_dragcircles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/puzzles/puzzle_findall6sor9s/puzzle_findall6sor9s.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/puzzles/puzzle_createsquare/puzzle_fixsquare.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/puzzles/puzzle_matchcolorandtext/puzzle_matchcolorandtext.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/puzzles/puzzle_memorizeshapes/puzzle_memorizeshapes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/puzzles/puzzle_memorizenumbers/puzzle_memorizenumbers.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/puzzle_screen/puzzle_describer.tscn" type="PackedScene" id=8]
 
 [node name="puzzle_screen" type="Node2D"]
