@@ -4,7 +4,6 @@
 [ext_resource path="res://Scripts/puzzles/puzzle_findall6sor9s/6or9.gd" type="Script" id=2]
 [ext_resource path="res://Textures/puzzle_findall6sor9s/9.png" type="Texture" id=3]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.56857
 height = 11.5439
@@ -25,3 +24,4 @@ wait_time = 0.3
 [node name="Tween" type="Tween" parent="."]
 [connection signal="input_event" from="." to="." method="_on_6or9_input_event"]
 [connection signal="timeout" from="click_timer" to="." method="_on_click_timer_timeout"]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

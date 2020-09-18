@@ -3,9 +3,6 @@
 [ext_resource path="res://Textures/puzzle_createsquare/square_piece.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/puzzles/puzzle_createsquare/square_piece.gd" type="Script" id=2]
 
-
-
-
 [node name="square_piece" type="Node2D"]
 position = Vector2( 137, 68 )
 script = ExtResource( 2 )

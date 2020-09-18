@@ -34,8 +34,10 @@ func _on_6or9_input_event(viewport, event, shape_idx):
 			number = 9
 		elif number == 9:
 			number = 6
-		#emit signal to checking puzzle after every click
-		emit_signal("checking_puzzle")
 
 func _on_click_timer_timeout():
 	coll.disabled = false
+
+func _on_Tween_tween_completed(object, key):
+	#emit signal to checking puzzle after every click and tween completed
+	emit_signal("checking_puzzle")
