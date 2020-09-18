@@ -7,27 +7,6 @@
 rotation = -7.93975e-05
 script = ExtResource( 2 )
 
-[node name="increase" type="Button" parent="."]
-margin_right = 100.0
-margin_bottom = 30.0
-text = "increase"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="descrease" type="Button" parent="."]
-margin_left = 172.0
-margin_top = 3.01366
-margin_right = 272.0
-margin_bottom = 33.0137
-text = "decrease"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="decrease_timer" type="Timer" parent="."]
-autostart = true
-
 [node name="circles" type="Node2D" parent="."]
 position = Vector2( 0, 185 )
 
@@ -67,6 +46,8 @@ position = Vector2( 200, 0 )
 
 [node name="health_circle12" parent="circles" instance=ExtResource( 1 )]
 position = Vector2( 214, 0 )
-[connection signal="pressed" from="increase" to="." method="_on_increase_pressed"]
-[connection signal="pressed" from="descrease" to="." method="_on_descrease_pressed"]
+
+[node name="decrease_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
 [connection signal="timeout" from="decrease_timer" to="." method="_on_decrease_timer_timeout"]

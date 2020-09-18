@@ -30,8 +30,8 @@ func puzzle_checker():
 	for number in positions.get_child_count():
 		current_numbers.append(positions.get_child(number).get_child(0).number)
 	if current_numbers.has(less_number) == false:
-		print("puzzle finished")
-		emit_signal("puzzle_finished", "create_new_puzzle")
+		print("successful")
+		emit_signal("puzzle_finished", "create_new_puzzle", "successful")
 
 #which number gonna be less 6 or 9?
 func _select_less_number():

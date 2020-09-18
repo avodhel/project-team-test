@@ -32,6 +32,6 @@ func _prepare_answers(colors) -> void:
 #check if clicked color and shape's color matched
 func check_answer(color) -> void:
 	if choosen_shape_color == color:
-		emit_signal("result", "correct")
+		emit_signal("result", "successful")
 	else:
-		emit_signal("result", "wrong")
+		emit_signal("result", "failed")

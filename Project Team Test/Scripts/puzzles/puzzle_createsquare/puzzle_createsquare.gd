@@ -23,5 +23,5 @@ func puzzle_checker() -> void:
 	for piece in pieces.get_children():
 		success_controls.append(piece.success_control)
 	if success_controls.has(false) == false:
-		print("puzzle finished")
-		emit_signal("puzzle_finished", "create_new_puzzle")
+		print("successful")
+		emit_signal("puzzle_finished", "create_new_puzzle", "successful")

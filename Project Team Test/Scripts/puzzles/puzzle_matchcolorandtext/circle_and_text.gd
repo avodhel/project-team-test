@@ -1,6 +1,6 @@
 extends Node2D
 
-signal stop_puzzle
+signal stop_puzzle(status)
 
 export (Array, Color) var colors
 
@@ -33,7 +33,6 @@ func _check_to_match():
 func _on_Circle_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if _check_to_match() == true:
-			print("successfull")
+			emit_signal("stop_puzzle", "successful")
 		else:
-			print("failed")
-		emit_signal("stop_puzzle")
+			emit_signal("stop_puzzle", "failed")

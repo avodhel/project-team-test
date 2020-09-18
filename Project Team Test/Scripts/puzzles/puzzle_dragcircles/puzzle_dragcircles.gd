@@ -14,11 +14,11 @@ func _puzzle_creater() -> void:
 	long_obstacle.connect("puzzle_checking", self, "puzzle_checker")
 	short_obstacle.connect("puzzle_checking", self, "puzzle_checker")
 
-func puzzle_checker(event) -> void:
-	print(event)
-	emit_signal("puzzle_finished", "create_new_puzzle")
+func puzzle_checker(result) -> void:
+	print(result)
+	emit_signal("puzzle_finished", "create_new_puzzle", result)
 
 func _on_point_area_body_entered(body):
 	#when circle1 reachs to the success point
 	if body.get_parent().name == "Circle1":
-		puzzle_checker("successfull")
+		puzzle_checker("successful")

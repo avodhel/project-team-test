@@ -5,8 +5,6 @@
 [ext_resource path="res://Scripts/puzzles/puzzle_memorizeshapes/puzzle_memorizeshapes.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/puzzles/puzzle_memorizeshapes/questions/question2_findshapescolor.tscn" type="PackedScene" id=4]
 
-
-
 [node name="puzzle_memorizeshapes" type="Node2D"]
 script = ExtResource( 3 )
 describe_text = "memorize what you see"

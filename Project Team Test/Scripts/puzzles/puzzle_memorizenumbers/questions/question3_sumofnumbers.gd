@@ -34,6 +34,6 @@ func _prepare_numbers() -> void:
 #check if clicked answer is correct or wrong
 func check_answer(clicked_answer) -> void:
 	if sum_of_numbers == clicked_answer:
-		emit_signal("result", "correct")
+		emit_signal("result", "successful")
 	else:
-		emit_signal("result", "wrong")
+		emit_signal("result", "failed")

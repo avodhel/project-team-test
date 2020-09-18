@@ -17,4 +17,4 @@ func _question_selector() -> void:
 
 func puzzle_checker(result) -> void:
 	print(result)
-	emit_signal("puzzle_finished", "create_new_puzzle")
+	emit_signal("puzzle_finished", "create_new_puzzle", result)

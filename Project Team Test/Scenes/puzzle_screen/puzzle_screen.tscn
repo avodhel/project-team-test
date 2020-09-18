@@ -1,16 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/puzzle_screen/puzzle_screen.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/puzzles/puzzle_dragcircles/puzzle_dragcircles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/puzzles/puzzle_findall6sor9s/puzzle_findall6sor9s.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/puzzles/puzzle_createsquare/puzzle_fixsquare.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/puzzles/puzzle_createsquare/puzzle_createsquare.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/puzzles/puzzle_matchcolorandtext/puzzle_matchcolorandtext.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/puzzles/puzzle_memorizeshapes/puzzle_memorizeshapes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/puzzles/puzzle_memorizenumbers/puzzle_memorizenumbers.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/puzzle_screen/puzzle_describer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/puzzle_screen/health_system/health_bar.tscn" type="PackedScene" id=9]
 
 [node name="puzzle_screen" type="Node2D"]
 script = ExtResource( 1 )
 puzzles = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 
 [node name="puzzle_describer" parent="." instance=ExtResource( 8 )]
+
+[node name="health_bar" parent="." instance=ExtResource( 9 )]

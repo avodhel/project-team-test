@@ -18,6 +18,6 @@ func prepare_shape(_shape_texture, _color) -> void:
 func _on_shape_area_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if fake_shape == true:
-			emit_signal("result", "correct")
+			emit_signal("result", "successful")
 		else:
-			emit_signal("result", "wrong")
+			emit_signal("result", "failed")

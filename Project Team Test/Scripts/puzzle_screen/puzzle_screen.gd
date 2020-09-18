@@ -3,15 +3,16 @@ extends Node2D
 export (Array, PackedScene) var puzzles
 
 onready var describer = $puzzle_describer
+onready var health_bar = $health_bar
 
 var ins_puzzle
 var puzzle_no
 
 func _ready():
-	puzzle_selector("create_first_puzzle")
+	puzzle_selector("create_first_puzzle", null)
 
 #select new puzzle after currrent puzzle finished
-func puzzle_selector(event) -> void:
+func puzzle_selector(event, result) -> void:
 	get_tree().paused = true
 	describer.clear_describer()
 	randomize()
@@ -23,7 +24,7 @@ func puzzle_selector(event) -> void:
 			yield(get_tree().create_timer(1.5), "timeout")
 			_puzzle_creater(rand_puzzle_no)
 		else:
-			puzzle_selector("create_new_puzzle")
+			puzzle_selector("create_new_puzzle", null)
 
 #create new puzzle according to puzzle number
 func _puzzle_creater(rand_puzzle_no) -> void:
@@ -34,5 +35,6 @@ func _puzzle_creater(rand_puzzle_no) -> void:
 		ins_puzzle.connect("puzzle_started", describer, "prepare_describer")
 		ins_puzzle.connect("puzzle_finished", self, "puzzle_selector")
 		ins_puzzle.connect("puzzle_finished", ins_puzzle, "remove_puzzle")
+		ins_puzzle.connect("puzzle_finished", health_bar, "health_bar_changer")
 		add_child(ins_puzzle)
 		get_tree().paused = false

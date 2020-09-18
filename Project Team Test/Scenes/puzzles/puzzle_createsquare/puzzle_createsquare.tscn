@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/puzzles/puzzle_createsquare/square_piece.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/puzzles/puzzle_createsquare/puzzle_fixsquare.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/puzzles/puzzle_createsquare/puzzle_createsquare.gd" type="Script" id=2]
 
-[node name="puzzle_fixsquare" type="Node2D"]
+[node name="puzzle_createsquare" type="Node2D"]
 script = ExtResource( 2 )
 describe_text = "create a square"
 

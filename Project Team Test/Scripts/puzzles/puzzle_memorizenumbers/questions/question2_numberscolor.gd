@@ -20,6 +20,6 @@ func _prepare_answers() -> void:
 
 func check_answer(clicked_answer) -> void:
 	if choosen_data.circle_color == clicked_answer:
-		emit_signal("result", "correct")
+		emit_signal("result", "successful")
 	else:
-		emit_signal("result", "wrong")
+		emit_signal("result", "failed")
