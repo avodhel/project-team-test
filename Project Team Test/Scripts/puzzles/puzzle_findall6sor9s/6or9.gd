@@ -1,6 +1,6 @@
 extends Node2D
 
-signal checking_puzzle
+signal checking_puzzle(clicked_number)
 
 export (int) var number
 export (Array, Texture) var numbers
@@ -11,12 +11,14 @@ onready var coll = $CollisionShape2D
 onready var click_timer = $click_timer
 
 var wait_time = 0.3
+var starting_number
 
 func _ready():
 	click_timer.wait_time = wait_time
 
 #choose 6 or 9 
 func prepare_number(value) -> void:
+	starting_number = value
 	number = value
 	if value == 6:
 		sprite.texture = numbers[0]
@@ -40,4 +42,4 @@ func _on_click_timer_timeout():
 
 func _on_Tween_tween_completed(object, key):
 	#emit signal to checking puzzle after every click and tween completed
-	emit_signal("checking_puzzle")
+	emit_signal("checking_puzzle", starting_number)

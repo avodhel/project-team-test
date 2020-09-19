@@ -28,5 +28,4 @@ func _on_puzzle_timer_timeout():
 #stop puzzle when clicked to circle
 func stop_puzzle(result):
 	puzzle_timer.stop()
-	print(result)
 	emit_signal("puzzle_finished", "create_new_puzzle", result)

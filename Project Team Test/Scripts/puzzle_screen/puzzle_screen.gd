@@ -16,6 +16,7 @@ func _ready():
 
 #select new puzzle after currrent puzzle finished
 func puzzle_selector(event, result) -> void:
+	print(result)
 	get_tree().paused = true
 	describer.clear_describer()
 	randomize()

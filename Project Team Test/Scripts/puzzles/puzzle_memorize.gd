@@ -16,5 +16,4 @@ func _question_selector() -> void:
 	emit_signal("puzzle_started", ins_question.describe_text)
 
 func puzzle_checker(result) -> void:
-	print(result)
 	emit_signal("puzzle_finished", "create_new_puzzle", result)

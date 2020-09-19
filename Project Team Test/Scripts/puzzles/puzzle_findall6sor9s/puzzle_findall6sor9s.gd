@@ -25,15 +25,16 @@ func _puzzle_creater() -> void:
 		_instance_number(positions.get_child(choosen_place), less_number)
 
 #checking if the puzzle is finished
-func puzzle_checker():
+func puzzle_checker(clicked_number):
 	var current_numbers = []
 	for number in positions.get_child_count():
 		current_numbers.append(positions.get_child(number).get_child(0).number)
 	if current_numbers.has(less_number) == false:
-		print("successful")
 		emit_signal("puzzle_finished", "create_new_puzzle", "successful")
+	elif majority_number == clicked_number:
+		emit_signal("puzzle_finished", "create_new_puzzle", "failed")
 
-#which number gonna be less 6 or 9?
+#which number gonna be less 6 or 9?-
 func _select_less_number():
 	randomize()
 	var possibility = rand_range(0, 100)
