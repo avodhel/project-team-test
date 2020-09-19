@@ -8,23 +8,33 @@ var sum_of_numbers = 0
 func _prepare_answers() -> void:
 	._prepare_answers() 
 	container.clear()
-	#find real answer
+	_real_answer()
+	_fake_answer(2)
+	_prepare_numbers()
+
+#find real answer
+func _real_answer() -> void:
 	for data in circle_and_number_datas:
 		sum_of_numbers += data.number
 	container.append(sum_of_numbers)
-	#create two fake answers
-	for fake_answer in 2:
+
+#create two fake answers
+func _fake_answer(number_of_answer) -> void:
+	for fake_answer in number_of_answer:
 		var rand_number = randi() % 3+1
 		var possibility = rand_range(0, 100)
 		if possibility < 50:
 			fake_answer = sum_of_numbers + rand_number
 		else:
 			fake_answer = sum_of_numbers - rand_number
+		#prevent possibility of number below zero and duplication for answers.
 		if fake_answer > 0:
-			container.append(fake_answer)
+			if container.has(fake_answer) == false:
+				container.append(fake_answer)
+			else:
+				_fake_answer(1)
 		else:
 			container.append(0) 
-	_prepare_numbers()
 
 func _prepare_numbers() -> void:
 	for number in numbers.get_children():
