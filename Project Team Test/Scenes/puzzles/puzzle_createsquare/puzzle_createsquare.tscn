@@ -7,6 +7,9 @@
 script = ExtResource( 2 )
 describe_text = "create a square"
 
+[node name="limit_timer" type="Timer" parent="."]
+wait_time = 10.0
+
 [node name="square_pieces" type="Node2D" parent="."]
 
 [node name="up" parent="square_pieces" instance=ExtResource( 1 )]
@@ -24,3 +27,4 @@ success_degree = 90
 position = Vector2( 105, 100 )
 rotation = -1.5708
 success_degree = 270
+[connection signal="timeout" from="limit_timer" to="." method="_on_limit_timer_timeout"]
