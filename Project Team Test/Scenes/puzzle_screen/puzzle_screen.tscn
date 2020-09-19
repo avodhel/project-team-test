@@ -14,6 +14,21 @@
 script = ExtResource( 1 )
 puzzles = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 
-[node name="puzzle_describer" parent="." instance=ExtResource( 8 )]
+[node name="screen" type="Node2D" parent="."]
 
-[node name="health_bar" parent="." instance=ExtResource( 9 )]
+[node name="puzzle_describer" parent="screen" instance=ExtResource( 8 )]
+
+[node name="health_bar" parent="screen" instance=ExtResource( 9 )]
+
+[node name="status_label" type="Label" parent="."]
+visible = false
+margin_right = 137.0
+margin_bottom = 100.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.780392, 0.239216, 0.239216, 1 )
+text = "Failed"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -2,14 +2,17 @@ extends Node2D
 
 export (Array, PackedScene) var puzzles
 
-onready var describer = $puzzle_describer
-onready var health_bar = $health_bar
+onready var screen = $screen
+onready var describer = $screen/puzzle_describer
+onready var health_bar = $screen/health_bar
+onready var status_label = $status_label
 
 var ins_puzzle
 var puzzle_no
 
 func _ready():
 	puzzle_selector("create_first_puzzle", null)
+	health_bar.connect("player_failed", self, "stop_puzzle_screen")
 
 #select new puzzle after currrent puzzle finished
 func puzzle_selector(event, result) -> void:
@@ -36,5 +39,10 @@ func _puzzle_creater(rand_puzzle_no) -> void:
 		ins_puzzle.connect("puzzle_finished", self, "puzzle_selector")
 		ins_puzzle.connect("puzzle_finished", ins_puzzle, "remove_puzzle")
 		ins_puzzle.connect("puzzle_finished", health_bar, "health_bar_changer")
-		add_child(ins_puzzle)
+		screen.add_child(ins_puzzle)
 		get_tree().paused = false
+
+func stop_puzzle_screen() -> void:
+	screen.visible = false
+	status_label.visible = true
+	get_tree().paused = true
